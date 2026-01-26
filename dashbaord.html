@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+.dashboard{
+    width:60%;
+    margin:100px auto;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dashboard h1{
+    color:rgb(0,77,243);
+    margin-bottom:15px;
+}
+
+.dashboard p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+button{
+    padding:12px 30px;
+    background:rgb(0,77,243);
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#003bbd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+    <h1>Welcome to Dashboard</h1>
+    <p>You have successfully logged in 🎉</p>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+function logout(){
+    alert("Logged out");
+    window.location.href = "index.html"; 
+}
+</script>
+
+</body>
+</html>

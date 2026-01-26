@@ -1,51 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
-    <section class="container">
-    <section class="sec1">
-    <div>
-        <h1>Sign up page</h1>
-        <form action="">
-            <label for="firstname">Firstname:</label>
-            <input type="text" id="firstname">
-            <br>
-            <label for="lastname">Lastname:</label>
-            <input type="text" id="lastname">
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password">
-            <br>
-           <input type="checkbox" id="agree">
-           <label for="agree">I agree to the terms...</label>
-            <br>
-            <button type="submit">Sign up</button>
-            <br>
-            <input type="checkbox" id="agree">
-           <p>Already have an account? <a href="#" id="a">Login</a></p>
 
-        </form>
-    </div>
+<body>
+
+    <section class="container">
+
+        <!-- SIGNUP -->
+        <section class="sec1">
+            <h1>Sign up page</h1>
+            <form id="signupForm">
+                <label>Firstname:</label>
+                <input type="text" id="firstname">
+
+                <label>Lastname:</label>
+                <input type="text" id="lastname">
+
+                <label>Password:</label>
+                <input type="password" id="signupPass">
+
+                <input type="checkbox" id="agree"> I agree to the terms
+
+                <button>Sign up</button>
+
+                <p>Already have an account? <a id="toLogin">Login</a></p>
+            </form>
+        </section>
+
+        <!-- LOGIN -->
+        <section class="sec2">
+            <h1>Login page</h1>
+            <form id="loginForm">
+                <label>Username:</label>
+                <input type="text" id="username">
+
+                <label>Password:</label>
+                <input type="password" id="loginPass">
+
+                <button>Login</button>
+
+                <p>Don't have an account? <a id="toSignup">Sign up</a></p>
+            </form>
+        </section>
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+            <h1>Welcome to Dashboard 🎉</h1>
+            <p>You have successfully logged in</p>
+            <button id="logout">Logout</button>
+        </section>
+
     </section>
-    <section class="sec2">
-    <div>
-        <h1>Login page</h1>
-        <form action="" method="post">
-           <label for="username">Username:</label>
-           <input type="text" id="username">
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password">
-            <br>
-            <button type="submit">Login</button>
-        </form>
-    </div>
-</section>
-</section>
+
+    <script>
+        const sec1 = document.querySelector(".sec1");
+        const sec2 = document.querySelector(".sec2");
+        const dashboard = document.querySelector(".dashboard");
+
+        const toLogin = document.getElementById("toLogin");
+        const toSignup = document.getElementById("toSignup");
+        const logoutBtn = document.getElementById("logout");
+
+        /* SWITCH PAGES */
+        toLogin.onclick = () => {
+            sec1.style.display = "none";
+            sec2.style.display = "block";
+        };
+
+        toSignup.onclick = () => {
+            sec2.style.display = "none";
+            sec1.style.display = "block";
+        };
+
+        /* SIGNUP */
+        document.getElementById("signupForm").onsubmit = (e) => {
+            e.preventDefault();
+            const pass = signupPass.value;
+            const agree = document.getElementById("agree").checked;
+
+            if (pass.length < 5 || !agree) {
+                alert("Signup error");
+            } else {
+                alert("Signup successful");
+                sec1.style.display = "none";
+                sec2.style.display = "block";
+            }
+        };
+
+        /* LOGIN */
+        document.getElementById("loginForm").onsubmit = (e) => {
+            e.preventDefault();
+
+            if (username.value === "ali" && loginPass.value === "12345") {
+                sec2.style.display = "none";
+                dashboard.style.display = "block";
+            } else {
+                alert("Invalid login");
+            }
+        };
+
+        /* LOGOUT */
+        logoutBtn.onclick = () => {
+            dashboard.style.display = "none";
+            sec2.style.display = "block";
+        };
+    </script>
+
 </body>
+
 </html>
