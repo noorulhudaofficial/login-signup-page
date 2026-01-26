@@ -42,25 +42,31 @@ button {
 }
 
 section.sec1 {
+     box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+  border: 1px solid grey;
+    width: 300px;
     background-color: lightgrey;
     padding: 20px;
     margin-bottom: 20px;
 }
 
 section.sec2 {
+     box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    border: 1px solid grey;
+    width: 300px;
     background-color: lightblue;
     padding: 20px;
     margin-bottom: 20px;
 }
 section.container{
-    width: 50%;
+   width: 700px;
     margin:auto;
     padding: 20px;
     display: flex;
-    border: #e7e7e7 solid 2px;
   justify-content: center;
   gap: 20px;
-
 }
 a{
     text-decoration: none;
@@ -71,6 +77,7 @@ a{
     display: flex;
 }
 h1{
+    
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
@@ -83,3 +90,23 @@ p{
     margin: 10px;
     font-size: 14px;
 }
+.dashboard{
+    width:60%;
+    margin:100px auto;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dashboard h1{
+    color:rgb(0, 186, 243);
+    margin-bottom:15px;
+}
+
+.dashboard p{
+    font-size:18px;
+    margin-bottom:30px;
+}
+

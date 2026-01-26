@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Login, Signup, Dashboard">
+    <meta name="description" content="The only favicon generator you need for your next project. Quickly generate your favicon from text, image, or choose from hundreds of emojis.">
+    <meta name="author" content="noor ul huda ">
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -12,42 +16,41 @@
 
     <section class="container">
 
-        <!-- SIGNUP -->
-        <section class="sec1">
-            <h1>Sign up page</h1>
-            <form id="signupForm">
-                <label>Firstname:</label>
-                <input type="text" id="firstname">
-
-                <label>Lastname:</label>
-                <input type="text" id="lastname">
-
-                <label>Password:</label>
-                <input type="password" id="signupPass">
-
-                <input type="checkbox" id="agree"> I agree to the terms
-
-                <button>Sign up</button>
-
-                <p>Already have an account? <a id="toLogin">Login</a></p>
-            </form>
-        </section>
-
         <!-- LOGIN -->
-        <section class="sec2">
+        <section class="sec1">
             <h1>Login page</h1>
             <form id="loginForm">
                 <label>Username:</label>
                 <input type="text" id="username">
+
+                <label>Lastname:</label>
+                <input type="text" id="lastname">
 
                 <label>Password:</label>
                 <input type="password" id="loginPass">
 
                 <button>Login</button>
 
-                <p>Don't have an account? <a id="toSignup">Sign up</a></p>
+                <p>Already have an account? <a id="toLogin">Sign up</a></p>
             </form>
         </section>
+
+        <!-- SIGNUP -->
+        <section class="sec2">
+            <h1>Sign up page</h1>
+            <form id="signupForm">
+                <label>Firstname:</label>
+                <input type="text" id="firstname">
+
+                <label>Password:</label>
+                <input type="password" id="signupPass">
+
+                <button>Sign up</button>
+
+                <p>Don't have an account? <a id="toSignup">Login</a></p>
+            </form>
+        </section>
+     </section>
 
         <!-- DASHBOARD -->
         <section class="dashboard">
@@ -56,7 +59,7 @@
             <button id="logout">Logout</button>
         </section>
 
-    </section>
+   
 
     <script>
         const sec1 = document.querySelector(".sec1");
@@ -97,7 +100,7 @@
         document.getElementById("loginForm").onsubmit = (e) => {
             e.preventDefault();
 
-            if (username.value === "ali" && loginPass.value === "12345") {
+            if (username.value === "Huda" && loginPass.value === "12345") {
                 sec2.style.display = "none";
                 dashboard.style.display = "block";
             } else {
